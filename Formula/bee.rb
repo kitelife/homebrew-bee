@@ -14,4 +14,5 @@ class Bee < Formula
         system "cp" "#{buildpath}/bin/bee" "#{bin}/"
 
         (HOMEBREW_PREFIX/bin).install_symlink "#{bin}/bee"
+    end
 end
