@@ -1,4 +1,4 @@
-class Gobee < Formula
+class Bee < Formula
     homepage "https://github.com/beego/bee"
     desc "Bee is a tool for helping develop with beego app framework."
 

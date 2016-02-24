@@ -1,8 +1,8 @@
-# Homebrew gobee Tap
+# Homebrew bee Tap
 
 ## Install
 
 ```
-$ brew tap youngsterxyf/homebrew-gobee
-$ brew install --HEAD gobee
+$ brew tap-pin youngsterxyf/bee
+$ brew install --HEAD bee
 ```
