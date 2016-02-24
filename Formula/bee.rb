@@ -4,6 +4,8 @@ class Bee < Formula
 
     head "https://github.com/beego/bee.git"
 
+    depends_on "go" => :build
+
     def install
         system "mkdir" "-p" "#{buildpath}/src/github.com/beego/bee"
         system "cp" "-r" "./*" "#{buildpath}/src/github.com/beego/bee"
@@ -11,8 +13,6 @@ class Bee < Formula
 
         system "go" "install" "github.com/beego/bee"
 
-        system "cp" "#{buildpath}/bin/bee" "#{bin}/"
-
-        (HOMEBREW_PREFIX/bin).install_symlink "#{bin}/bee"
+        bin.install "#{buildpath}/bin/bee"
     end
 end
