@@ -3,6 +3,6 @@
 ## Install
 
 ```
-$ brew tap youngsterxyf/homebrew-gobee
+$ brew tap youngsterxyf/gobee
 $ brew install --HEAD gobee
 ```
