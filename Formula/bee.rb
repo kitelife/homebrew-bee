@@ -7,11 +7,13 @@ class Bee < Formula
     depends_on "go" => :build
 
     def install
-        ENV["GOPATH"] = buildpath
+        system "mkdir", "-p", "#{buildpath}/.build/src/github.com/beego/bee"
+        (buildpath/".build/src/github.com/beego/bee").install Dir["*"]
+        ENV["GOPATH"] = "#{buildpath}/.build"
 
         system "go", "get", "github.com/beego/bee"
 
-        bin.install "#{buildpath}/bin/bee"
+        bin.install "#{buildpath}/.build/bin/bee"
         (HOMEBREW_PREFIX/"bin").install_symlink "#{bin}/bee"
     end
 end
